@@ -17,14 +17,6 @@ void FillMatrix(int array[3][3], short Rows, short Cols) {
 	}
 }
 
-void TranposeMatrix(int array[3][3], int arrTransposed[3][3], short Rows, short Cols) {
-	for (short i = 0; i < Rows; i++) {
-		for (short j = 0; j < Cols; j++) {
-			arrTransposed[j][i] = array[i][j];
-		}
-	}
-}
-
 void PrintMatrix(int array[3][3], short Rows, short Cols) {
 	for (short i = 0; i < Rows; i++) {
 		for (short j = 0; j < Cols; j++) {
