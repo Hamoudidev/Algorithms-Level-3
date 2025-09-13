@@ -28,7 +28,6 @@ void TranposeMatrix(int array[3][3], int arrTransposed[3][3], short Rows, short 
 void PrintMatrix(int array[3][3], short Rows, short Cols) {
 	for (short i = 0; i < Rows; i++) {
 		for (short j = 0; j < Cols; j++) {
-			//cout << setw(3) << array[i][j] << "\t";
 			printf(" %0*d   ", 2, array[i][j]);
 		}
 		cout << endl;
