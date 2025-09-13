@@ -3,12 +3,6 @@
 
 using namespace std;
 
-int RandomNumber(int From, int To) {
-	int number = rand() % (To - From + 1) + From;
-
-	return number;
-}
-
 void FillMatrix(int array[3][3], short Rows, short Cols) {
 	int Counter = 1;
 	for (short i = 0; i < Rows; i++) {
