@@ -11,18 +11,13 @@ string ReadWord(string Message) {
 	return Word;
 }
 
-char upperLatter(char Latter) {
-	char x = toupper(Latter);
-	return x;
-}
-
 void upperFirstLatter(string Word) {
 	bool isFirstLetter = true;
 	cout << "\nString after conversion:" << endl;
 
 	for (short i = 0; i < Word.length(); i++) {
 		if (Word[i] != ' ' && isFirstLetter) {
-			Word[i] = upperLatter(Word[i]);
+			Word[i] = toupper(Word[i]);
 		}
 
 		isFirstLetter = (Word[i] == ' ' ? true : false);
