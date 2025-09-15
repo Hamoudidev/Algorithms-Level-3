@@ -26,17 +26,6 @@ void PrintMatrix(int array[3][3], short Rows, short Cols) {
 	}
 }
 
-int SumMatrix(int array[3][3], short Rows, short Cols) {
-	int Sum = 0;
-	for (short i = 0; i < Rows; i++) {
-		for (short j = 0; j < Cols; j++) {
-			Sum += array[i][j];
-		}
-	}
-
-	return Sum;
-}
-
 bool checkEqualTypical(int array[3][3], int array2[3][3], short Rows, short Cols) {
 	for (short i = 0; i < Rows; i++) {
 		for (short j = 0; j < Cols; j++) {
