@@ -4,15 +4,6 @@
 
 using namespace std;
 
-int ReadNumber(string Message) {
-	int Number;
-
-	cout << Message;
-	cin >> Number;
-
-	return Number;
-}
-
 int RandomNumber(int From, int To) {
 	int number = rand() % (To - From + 1) + From;
 
