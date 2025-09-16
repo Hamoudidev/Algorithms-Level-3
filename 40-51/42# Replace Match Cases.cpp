@@ -33,8 +33,17 @@ string lowerAllLatters(string Word) {
 	return Word;
 }
 
+string joinString(vector <string> Elements, string delim) {
+	string Word = "";
+
+	for (string Element : Elements) {
+		Word += Element + delim;
+	}
+
+	return Word.substr(0, Word.length() - delim.length());
+}
+
 string ReplceString(string Word, string ReplaceFrom, string ReplaceTo, bool matchCase = true) {
-	string replacedWord = "";
 	vector <string> Tokens = splitString(Word, " ");
 
 	for (short i = 0; i < Tokens.size(); i++) {
@@ -46,24 +55,9 @@ string ReplceString(string Word, string ReplaceFrom, string ReplaceTo, bool matc
 			if (lowerAllLatters(Tokens[i]) == lowerAllLatters(ReplaceFrom))
 				Tokens[i] = ReplaceTo;
 		}
-
-		replacedWord += Tokens[i] + " ";
 	}
 
-	replacedWord = replacedWord.substr(0, replacedWord.length() - 1);
-
-	return replacedWord;
-}
-
-string BuiltInReplaceFunc(string Word, string ReplaceFrom, string ReplaceTo) {
-	short Pos = Word.find(ReplaceFrom);
-
-	while (Pos != string::npos) {
-		Word = Word.replace(Pos, ReplaceFrom.length(), ReplaceTo);
-		Pos = Word.find(ReplaceFrom);
-	}
-
-	return Word;
+	return joinString(Tokens, " ");
 }
 
 int main() {
