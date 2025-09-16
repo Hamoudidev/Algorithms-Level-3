@@ -4,13 +4,6 @@
 
 using namespace std;
 
-string ReadWord(string Message) {
-	string Word;
-	cout << Message << endl;
-	getline(cin, Word);
-	return Word;
-}
-
 vector <string> splitString(string Word, string delim) {
 	vector <string> Tokens;
 
