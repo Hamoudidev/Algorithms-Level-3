@@ -13,16 +13,21 @@ string ReadWord(string Message) {
 void PrintEachWord(string Word) {
 	cout << "\nYour string words are :\n" << endl;
 
-	char LastChar = 'a';
-	for (short i = 0; i < Word.length(); i++) {
-		if (Word[i] != ' ') {
-			cout << Word[i];
+	string delim = " ";
+	short Pos = 0;
+	string sWord;
+
+	while ((Pos = Word.find(delim)) != string::npos) {
+		sWord = Word.substr(0, Pos);
+		if (sWord != "") {
+			cout << sWord << endl;
 		}
-		else if(Word[i] == ' ' && LastChar != ' ')
-			cout << endl;
 
-		LastChar = Word[i];
+		Word.erase(0, Pos + delim.length());
+	}
 
+	if (Word != "") {
+		cout << Word << endl;
 	}
 }
 
