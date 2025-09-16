@@ -13,10 +13,6 @@ char ReadChar(string Message) {
 	return Character;
 }
 
-char InvertLatter(char Latter) {
-	return isupper(Latter) ? Latter = tolower(Latter) : Latter = toupper(Latter);
-}
-
 bool checkVowel(char VowelsChars[5], char Target) {
 	for (short i = 0; i < 5; i++) {
 		if (tolower(VowelsChars[i]) == tolower(Target))
