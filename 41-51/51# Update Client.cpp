@@ -176,8 +176,6 @@ void UpdateAccount(vector <stClients>& vClients, string TargetAccountNumber) {
 
 			SaveNewClients("Clients.txt", vClients);
 
-			vClients = LoadData("Clients.txt");
-
 			cout << "\nClient Updated Successfully.\n";
 		}
 
